@@ -1,0 +1,8 @@
+#links ul {
+    display: flex;
+}
+
+#links ul li{
+    list-style-type: none;
+    margin: 0 10px;
+}
