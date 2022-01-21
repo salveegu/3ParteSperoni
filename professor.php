@@ -10,7 +10,9 @@ include ('cabecalho.html');
     </dl>
 
 </main>
-<script src="js/professor.js"></script>
+<script src="js/professores.js"></script>
+
+
 <?php
 include ('rodape.html');
 ?>

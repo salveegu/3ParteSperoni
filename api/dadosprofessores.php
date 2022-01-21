@@ -1,6 +1,7 @@
 <?php
 header('Content-Type: application/json');
-include('../dados.php');
+//include('../dados.php');// remover
+include('conexao.php');//incluir
 
 if(isset($_GET['id'])){
     echo json_encode(getProfessor($_GET['id']));

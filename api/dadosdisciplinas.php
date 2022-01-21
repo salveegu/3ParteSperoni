@@ -1,6 +1,6 @@
 <?php
 
-include_once('../dados.php');
+include_once('../conexao.php');
 
 if(isset($_GET['id_curso'])){
     $id_curso = $_GET['id_curso'];

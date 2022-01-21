@@ -1,14 +1,10 @@
 <?php
-//este script busca os dados de um curso ou de todos
-//inclui o arquivo que contém os dados e as funções getCursos() e getCursoById()
-  include_once('../dados.php');
+  header('Content-Type: application/json');
+  //include_once('../dados.php'); //removemos a inclusão do arquivo que continha os arrays e as funções de acesso aos dados
+  include_once('conexao.php'); //incluímos o arquivo com a conexão e a função de busca do BD
 
-//caso o Query String traga um parâmetro id
-if(isset($_GET['id'])){
-    //busca o Array com os dados de um curso específico, e codifica em JSON e escreve
+  if(isset($_GET['id'])){
     echo json_encode(getCursoPorId($_GET['id']));
-}else{ // caso não traga id
-    //busca o Array com os dados de todos os cursos, e codifica em JSON e escreve
+  }else{
     echo json_encode(getCursos());
   }
-?>
